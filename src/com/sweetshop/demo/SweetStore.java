@@ -1,12 +1,15 @@
 // data or model layer
 package com.sweetshop.demo;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SweetStore {
 	
-	private Set<Sweet> sweetList = new HashSet();
+	Map<String, List> orderMap = new HashMap<>();
+	private List<Sweet> sweetList = new ArrayList<>();
 	private static SweetStore instance;
 	
 	private SweetStore() {}
@@ -22,7 +25,7 @@ public class SweetStore {
 		sweetList.add(sweet);
 	}
 	
-	public Set getList() {
+	public List getList() {
 		return sweetList;
 	}
 	
